@@ -1,0 +1,55 @@
+
+/**
+ * Give a golf score and par for the hole and determine the par type
+ *
+ * @author jason Schoenmann
+ * @version 0.1
+ */
+public class golf_easy
+{
+    private int par;
+    private int score;
+    
+    public golf_easy(int p, int s)
+    {
+        par = p;
+        score = s;
+    }
+    
+    public void setPar(int p)
+    {
+        par = p;
+    }
+    
+    public void setScore(int s)
+    {
+        score = s;
+    }
+    
+    public int getPar()
+    {
+        return par;
+    }
+    
+    public int getScore()
+    {
+        return score;
+    }
+    
+    public String toString()
+   {
+       if (score == par - 2)
+            return "Eagle";
+         else if( score == par - 1)
+                return "Birdie";
+         else if(score == par)
+                return "Par";
+         else if( score == par+1)
+                return "Bogey";
+         else if(score == par+2)
+                return "Double Bogey";
+         else if (score == 1)
+                return "Hole In One!";
+       return score - par + " Above par";
+   }
+}
